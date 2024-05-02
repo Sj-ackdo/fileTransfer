@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 
+
 def start():
     usbPy = os.popen("ls /dev/disk/by-id | grep '^usb.*part1$'")
     usbPy = usbPy.read().strip("\n")
@@ -25,13 +26,19 @@ def start():
     usbChoice = usb_dict.get(usbChoice)
     if not os.path.exists("/media/usb"):
         os.mkdir("/media/usb")
+
+    if os.path.ismount("/media/usb"):
+        os.system("umount /media/usb")
     os.system("mount /dev/disk/by-id/" + usbChoice + " /media/usb")
     
-    print("Which directory would you like to transfer to the USB?\n")
+    print("Which directory would you like to transfer to the USB?")
     inputDir = input("Enter the directory: ").rstrip()
     if os.path.exists(inputDir):
         os.system("cp -rv " + inputDir+ " /media/usb")
         print("Transfer completed...")
+    else:
+        print("Directory does not exist!")
+        exit()
 
 
 
