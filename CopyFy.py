@@ -11,7 +11,7 @@ def start():
     for i, x in enumerate(usbPy.split()):
         usb_dict[i] = x
     
-    if amountUsb > 1:
+    if amountUsb >= 1:
         print( "**", amountUsb, "Storage USB('s) found**")
         print("-----------------------------------------------------")
         for b in range(amountUsb):
