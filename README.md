@@ -9,6 +9,8 @@ CopyFy is a simple script that let's you copy file's to an USB without the hassl
 
 CopyFy requires [Python](https://www.python.org/) V3 to run.
 
+!CopyFy must be run as root!
+
 Clone the repo
 `git clone https://github.com/Sj-ackdo/fileTransfer`
 
@@ -16,4 +18,4 @@ cd into the directory and make executable
 `cd fileTransfer && chmod +x CopyFy.py`
 
 Now execute with
-`./CopyFy.py`
+`sudo ./CopyFy.py`
