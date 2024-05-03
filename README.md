@@ -6,7 +6,7 @@ CopyFy is a simple script that let's you copy file's to an USB without the hassl
 - Enter the directory/files that will be copied
 - Wait... Tada!
 
-! ~ does not work, use the full path!
+~ does not work, use the full path!
 # Installation
 
 CopyFy requires [Python](https://www.python.org/) V3 to run.
